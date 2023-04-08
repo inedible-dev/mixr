@@ -19,6 +19,7 @@ class MixData: ObservableObject {
     }
     @Published var players = AudioPlayer()
     @Published var selectedTrack: String? = nil
+    @Published var noAudio = false
     
     init() {
         if let storedData = UserDefaults.standard.data(forKey: "storedMixData") {
@@ -95,6 +96,7 @@ class MixData: ObservableObject {
             }
             data.remove(at: dataIdx!)
         }
+        play()
     }
     
     func resetData() {
@@ -148,7 +150,7 @@ class MixData: ObservableObject {
             }
         }
         if(pauseBefore) {
-            play(throwNoAudio: {})
+            play()
         }
     }
     
@@ -221,9 +223,9 @@ class MixData: ObservableObject {
         }
     }
     
-    func play(throwNoAudio: () -> Void) {
+    func play() {
         if(players.player.first?.node == nil) {
-            throwNoAudio()
+            noAudio = true
             return
         }
         if(players.paused == false){

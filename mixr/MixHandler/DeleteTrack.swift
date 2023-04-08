@@ -10,6 +10,7 @@ struct DeleteTrack: View {
         let compact = sizeClass == .compact
         
         Button(action: {
+            mix.timer.stop()
             deleteAlert.toggle()
         }, label: {
             HStack(spacing: 6){
@@ -22,7 +23,9 @@ struct DeleteTrack: View {
                 }
             }
         }).alert(isPresented: $deleteAlert) {
-                Alert(title: Text("Delete This Track"), message: Text("Press Continue to delete this track"), primaryButton: .cancel(), secondaryButton: .destructive(Text("Continue")) {
+            Alert(title: Text("Delete This Track"), message: Text("Press Continue to delete this track"), primaryButton: .cancel({
+                mix.startTimer()
+            }), secondaryButton: .destructive(Text("Continue")) {
                     mix.deleteTrack()
                 })
             }
