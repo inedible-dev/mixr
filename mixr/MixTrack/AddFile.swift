@@ -29,18 +29,10 @@ struct AddDocument: View {
     @State var initAudioFailed = false
     @State var isPlayingAlert = false
     @State var importedFile: URL!
-    @State var noAudio = false
     
     var body: some View {
         Button(action: {
-            if mix.players.paused {
-//                mix.pause()
-//                isPlayingAlert = true
-                importing.toggle()
-            }
-//            else {
-//                importing.toggle()
-//            }
+            importing = true
         }, label: {
             Image(systemName: (fileURL != nil) ? "waveform.circle.fill" : "waveform.path.badge.plus")
                 .font(.system(size: 32, weight: .regular))
@@ -56,7 +48,12 @@ struct AddDocument: View {
             if case .success = result {
                 do {
                     importedFile = try result.get().first!
-                    initAudio(file: importedFile, withPause: false)
+                    if(mix.players.paused == false) {
+                        mix.timer.stop()
+                        isPlayingAlert = true
+                    } else {
+                        initAudio(file: importedFile, withPause: false)
+                    }
                 } catch {
                     importedFailed = true
                 }
@@ -71,14 +68,11 @@ struct AddDocument: View {
             Alert(title: Text("Audio Init Failed"), message: Text("Failed to initialize the audio player"))
         }
         .alert(isPresented: $isPlayingAlert) {
-            Alert(title: Text("New Audio Loaded"), message: Text("Please continue to refresh the player"), primaryButton: .cancel(), secondaryButton: .default(Text("Continue")){
-//                importing.toggle()
-//                mix.play(throwNoAudio: {
-//                    noAudio = true
-//                })
+            Alert(title: Text("New Audio Loaded"), message: Text("Please continue to refresh the player"), primaryButton: .cancel({
+                mix.startTimer()
+            }), secondaryButton: .default(Text("Continue")){
+                initAudio(file: importedFile, withPause: true)
             })
-        }.alert(isPresented: $noAudio) {
-            Alert(title: Text("No audio is loaded"))
         }.onAppear {
             if(mix.isUserDefaultsLoaded) {
                 if(fileURL != nil) {

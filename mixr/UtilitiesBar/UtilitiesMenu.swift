@@ -13,6 +13,7 @@ struct UtilitiesMenu: View {
                 Label("Show Tutorial", systemImage: "doc.text.fill")
             }
             Button(action: {
+                mix.timer.stop()
                 clearMixerAlert = true
             }) {
                 Label("Clear Mixer", systemImage: "clear.fill")
@@ -23,7 +24,9 @@ struct UtilitiesMenu: View {
                 .foregroundColor(.white)
         }.padding()
             .alert(isPresented: $clearMixerAlert) {
-                Alert(title: Text("Clear Mixer"), message: Text("Press Continue to reinitialize the mixer"), primaryButton: Alert.Button.cancel(), secondaryButton: Alert.Button.destructive(Text("Continue")) {
+                Alert(title: Text("Clear Mixer"), message: Text("Press Continue to reinitialize the mixer"), primaryButton: .cancel({
+                    mix.startTimer()
+                }), secondaryButton: .destructive(Text("Continue")) {
                     mix.resetData()
                 })
             }

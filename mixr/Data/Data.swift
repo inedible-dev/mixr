@@ -7,8 +7,10 @@ class MixData: ObservableObject {
     @AppStorage("storedMixData") var storage = ""
     @AppStorage("isTutorialToggled") var tutorial = true
     
-    private var timer = FetchTimer()
+    var timer = FetchTimer()
     var isUserDefaultsLoaded = false
+    
+    private var syncIdx: Int?
     
     @Published var data: [MixControl] {
         didSet {
@@ -96,6 +98,7 @@ class MixData: ObservableObject {
     }
     
     func resetData() {
+        pause()
         data = [MixControl(0)]
         players = AudioPlayer()
         UserDefaults.standard.set("", forKey: "storedMixData")
@@ -187,6 +190,37 @@ class MixData: ObservableObject {
         }
     }
     
+    func startTimer() {
+        timer.start(timeInterval: 0.05) {
+            if(self.players.paused == false) {
+                
+                //---------- Update Current PlayTime ----------//
+                
+                let currentTime = self.players.player[self.syncIdx!].node?.currentTime
+                if(currentTime != nil) {
+                    self.players.syncTime.current = currentTime!
+                }
+                
+                //---------- Check Playing ----------//
+                
+                let isPlaying = self.players.player[self.syncIdx!].node?.isPlaying
+                if(isPlaying == false) {
+                    self.players.paused = true
+                }
+                
+                //---------- Assign Current dB ----------//
+                
+                for track in self.players.player {
+                    let playerIdx = self.getPlayerFromUUID(track.id)
+                    self.players.player[playerIdx!].node?.updateMeters()
+                    self.players.player[playerIdx!].currentdB = (self.players.player[playerIdx!].node?.averagePower(forChannel: 0))!
+                }
+            } else {
+                self.pauseProcess(statePaused: true)
+            }
+        }
+    }
+    
     func play(throwNoAudio: () -> Void) {
         if(players.player.first?.node == nil) {
             throwNoAudio()
@@ -223,36 +257,11 @@ class MixData: ObservableObject {
         
         //----------------- Sync Process -----------------//
         
-        let syncIdx = getPlayerFromUUID(players.syncTime.uuid!)
+        syncIdx = getPlayerFromUUID(players.syncTime.uuid!)
+        
+        
         if(syncIdx != nil) {
-            timer.start(timeInterval: 0.05) {
-                if(self.players.paused == false) {
-                    
-                    //---------- Update Current PlayTime ----------//
-                    
-                    let currentTime = self.players.player[syncIdx!].node?.currentTime
-                    if(currentTime != nil) {
-                        self.players.syncTime.current = currentTime!
-                    }
-                    
-                    //---------- Check Playing ----------//
-                    
-                    let isPlaying = self.players.player[syncIdx!].node?.isPlaying
-                    if(isPlaying == false) {
-                        self.players.paused = true
-                    }
-                    
-                    //---------- Assign Current dB ----------//
-                    
-                    for track in self.players.player {
-                        let playerIdx = self.getPlayerFromUUID(track.id)
-                        self.players.player[playerIdx!].node?.updateMeters()
-                        self.players.player[playerIdx!].currentdB = (self.players.player[playerIdx!].node?.averagePower(forChannel: 0))!
-                    }
-                } else {
-                    self.pauseProcess(statePaused: true)
-                }
-            }
+            startTimer()
         }
     }
     
