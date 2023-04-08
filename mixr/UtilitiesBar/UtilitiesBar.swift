@@ -5,7 +5,7 @@ struct UtilitiesBar: View {
         HStack {
             Spacer()
             UtilitiesMenu()
-        }.frame(maxWidth: .infinity, minHeight: 50)
+        }.padding(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
             .background(Color.black)
     }
 }
