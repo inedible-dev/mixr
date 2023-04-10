@@ -96,7 +96,6 @@ class MixData: ObservableObject {
             }
             data.remove(at: dataIdx!)
         }
-        play()
     }
     
     func resetData() {

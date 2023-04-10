@@ -3,7 +3,8 @@ import SwiftUI
 struct UtilitiesMenu: View {
     @EnvironmentObject var mix: MixData
     
-    @State var clearMixerAlert = false
+    @State private var clearMixerAlert = false
+    @State private var isPlayingBefore = false
     
     var body: some View {
         Menu {
@@ -13,7 +14,10 @@ struct UtilitiesMenu: View {
                 Label("Show Tutorial", systemImage: "doc.text.fill")
             }
             Button(action: {
-                mix.timer.stop()
+                if !mix.players.paused {
+                    mix.timer.stop()
+                    isPlayingBefore.toggle()
+                }
                 clearMixerAlert = true
             }) {
                 Label("Clear Mixer", systemImage: "clear.fill")
@@ -25,7 +29,10 @@ struct UtilitiesMenu: View {
         }.padding()
             .alert(isPresented: $clearMixerAlert) {
                 Alert(title: Text("Clear Mixer"), message: Text("Press Continue to reinitialize the mixer"), primaryButton: .cancel({
-                    mix.startTimer()
+                    if isPlayingBefore {
+                        mix.startTimer()
+                        isPlayingBefore.toggle()
+                    }
                 }), secondaryButton: .destructive(Text("Continue")) {
                     mix.resetData()
                 })

@@ -4,13 +4,17 @@ struct DeleteTrack: View {
     @EnvironmentObject var mix: MixData
     @Environment(\.horizontalSizeClass) private var sizeClass
     
-    @State var deleteAlert = false
+    @State private var deleteAlert = false
+    @State private var isPlayingBefore = false
     
     var body: some View {
         let compact = sizeClass == .compact
         
         Button(action: {
-            mix.timer.stop()
+            if !mix.players.paused {
+                mix.timer.stop()
+                isPlayingBefore.toggle()
+            }
             deleteAlert.toggle()
         }, label: {
             HStack(spacing: 6){
@@ -24,10 +28,17 @@ struct DeleteTrack: View {
             }
         }).alert(isPresented: $deleteAlert) {
             Alert(title: Text("Delete This Track"), message: Text("Press Continue to delete this track"), primaryButton: .cancel({
-                mix.startTimer()
+                if isPlayingBefore {
+                    mix.startTimer()
+                    isPlayingBefore.toggle()
+                }
             }), secondaryButton: .destructive(Text("Continue")) {
-                    mix.deleteTrack()
-                })
-            }
+                mix.deleteTrack()
+                if isPlayingBefore {
+                    mix.play()
+                    isPlayingBefore.toggle()
+                }
+            })
+        }
     }
 }

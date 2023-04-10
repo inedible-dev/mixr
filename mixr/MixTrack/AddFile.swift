@@ -23,12 +23,13 @@ struct AddDocument: View {
         }
     }
     
-    @State var importing = false
-    @State var importedFailed = false
-    @State var filePermissionsFailed = false
-    @State var initAudioFailed = false
-    @State var isPlayingAlert = false
-    @State var importedFile: URL!
+    @State private var importing = false
+    @State private var importedFailed = false
+    @State private var filePermissionsFailed = false
+    @State private var initAudioFailed = false
+    @State private var isPlayingAlert = false
+    @State private var importedFile: URL!
+    @State private var isPlayingBefore = false
     
     var body: some View {
         Button(action: {
@@ -49,7 +50,10 @@ struct AddDocument: View {
                 do {
                     importedFile = try result.get().first!
                     if(mix.players.paused == false) {
-                        mix.timer.stop()
+                        if !mix.players.paused {
+                            mix.timer.stop()
+                            isPlayingBefore.toggle()
+                        }
                         isPlayingAlert = true
                     } else {
                         initAudio(file: importedFile, withPause: false)
@@ -69,7 +73,10 @@ struct AddDocument: View {
         }
         .alert(isPresented: $isPlayingAlert) {
             Alert(title: Text("New Audio Loaded"), message: Text("Please continue to refresh the player"), primaryButton: .cancel({
-                mix.startTimer()
+                if isPlayingBefore {
+                    mix.startTimer()
+                    isPlayingBefore.toggle()
+                }
             }), secondaryButton: .default(Text("Continue")){
                 initAudio(file: importedFile, withPause: true)
             })

@@ -3,7 +3,8 @@ import SwiftUI
 struct AddTrack: View {
     @EnvironmentObject var mix: MixData
     @Environment(\.horizontalSizeClass) private var sizeClass
-    @State var latencyWarning = false
+    @State private var latencyWarning = false
+    @State private var isPlayingBefore = false
     
     var body: some View {
         let compact = sizeClass == .compact
@@ -12,7 +13,11 @@ struct AddTrack: View {
             if(mix.data.count < 12) {
                 mix.addTrack()
             } else {
-                latencyWarning = true
+                if !mix.players.paused {
+                    mix.timer.stop()
+                    isPlayingBefore.toggle()
+                }
+                latencyWarning.toggle()
             }
         }, label: {
             HStack(spacing: 6) {
@@ -27,6 +32,10 @@ struct AddTrack: View {
         }).alert(isPresented: $latencyWarning) {
             Alert(title: Text("Volume Warning"), message: Text("Press Continue to add another track"), primaryButton: Alert.Button.cancel(), secondaryButton: Alert.Button.destructive(Text("Continue")) {
                 mix.addTrack()
+                if isPlayingBefore {
+                    mix.startTimer()
+                    isPlayingBefore.toggle()
+                }
             })
         }
     }
