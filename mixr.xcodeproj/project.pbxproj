@@ -158,6 +158,21 @@
 			path = MixTrackView;
 			sourceTree = "<group>";
 		};
+		1D744AE72A54851400CDCA1E /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				1D744AE82A54851900CDCA1E /* Assets */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		1D744AE82A54851900CDCA1E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		1D9116C32A54721D00BE1221 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +259,7 @@
 		1D9116D12A54780800BE1221 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D744AE72A54851400CDCA1E /* Development */,
 				1D22274129ADF5E0008EF5AD /* Info.plist */,
 				1D244AFA29ADF43200250968 /* mixrApp.swift */,
 				1D244AF829ADF42800250968 /* Assets.xcassets */,
@@ -495,11 +511,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mixr/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mixr/Resources/Development/Assets\"";
 				DEVELOPMENT_TEAM = SX5J72PCDG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mixr/Info.plist;
+				INFOPLIST_FILE = mixr/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = mixr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -531,11 +547,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mixr/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mixr/Resources/Development/Assets\"";
 				DEVELOPMENT_TEAM = SX5J72PCDG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mixr/Info.plist;
+				INFOPLIST_FILE = mixr/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = mixr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
