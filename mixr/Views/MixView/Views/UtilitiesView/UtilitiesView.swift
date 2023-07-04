@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct UtilitiesBar: View {
+struct UtilitiesView: View {
     var body: some View {
         HStack {
             Spacer()

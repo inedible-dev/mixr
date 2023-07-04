@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AddTrack: View {
+struct AddButton: View {
     @EnvironmentObject var mix: MixData
     @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var latencyWarning = false

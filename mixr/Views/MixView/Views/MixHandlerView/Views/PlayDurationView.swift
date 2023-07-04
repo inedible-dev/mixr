@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFAudio
 
-struct PlayTime: View {
+struct PlayDurationView: View {
     @EnvironmentObject var mix: MixData
     
     func getZeroDigit(_ number: Int) -> String {

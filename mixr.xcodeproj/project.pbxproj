@@ -7,57 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D244AB829ADF36600250968 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D244AB729ADF36600250968 /* Preview Assets.xcassets */; };
-		1D244ADE29ADF37E00250968 /* UtilitiesBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC129ADF37E00250968 /* UtilitiesBar.swift */; };
+		1D244ADE29ADF37E00250968 /* UtilitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC129ADF37E00250968 /* UtilitiesView.swift */; };
 		1D244ADF29ADF37E00250968 /* UtilitiesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC229ADF37E00250968 /* UtilitiesMenu.swift */; };
-		1D244AE029ADF37E00250968 /* DeleteTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC429ADF37E00250968 /* DeleteTrack.swift */; };
-		1D244AE129ADF37E00250968 /* PlayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC529ADF37E00250968 /* PlayTime.swift */; };
-		1D244AE229ADF37E00250968 /* StopHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC629ADF37E00250968 /* StopHandler.swift */; };
-		1D244AE329ADF37E00250968 /* PlayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC729ADF37E00250968 /* PlayHandler.swift */; };
-		1D244AE429ADF37E00250968 /* MixHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC829ADF37E00250968 /* MixHandler.swift */; };
-		1D244AE529ADF37E00250968 /* AddTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC929ADF37E00250968 /* AddTrack.swift */; };
+		1D244AE029ADF37E00250968 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC429ADF37E00250968 /* DeleteButton.swift */; };
+		1D244AE129ADF37E00250968 /* PlayDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC529ADF37E00250968 /* PlayDurationView.swift */; };
+		1D244AE229ADF37E00250968 /* PauseStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC629ADF37E00250968 /* PauseStopButton.swift */; };
+		1D244AE329ADF37E00250968 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC729ADF37E00250968 /* PlayButton.swift */; };
+		1D244AE429ADF37E00250968 /* MixHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC829ADF37E00250968 /* MixHandlerView.swift */; };
+		1D244AE529ADF37E00250968 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AC929ADF37E00250968 /* AddButton.swift */; };
 		1D244AE629ADF37E00250968 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACB29ADF37E00250968 /* Data.swift */; };
-		1D244AE729ADF37E00250968 /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACC29ADF37E00250968 /* Mix.swift */; };
-		1D244AE829ADF37E00250968 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACD29ADF37E00250968 /* File.swift */; };
-		1D244AE929ADF37E00250968 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACE29ADF37E00250968 /* Fetch.swift */; };
+		1D244AE729ADF37E00250968 /* MixControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACC29ADF37E00250968 /* MixControl.swift */; };
+		1D244AE929ADF37E00250968 /* FetchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACE29ADF37E00250968 /* FetchTimer.swift */; };
 		1D244AEA29ADF37E00250968 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ACF29ADF37E00250968 /* Player.swift */; };
 		1D244AEC29ADF37E00250968 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD229ADF37E00250968 /* TutorialView.swift */; };
-		1D244AED29ADF37E00250968 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD429ADF37E00250968 /* ViewExtension.swift */; };
-		1D244AEE29ADF37E00250968 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD529ADF37E00250968 /* ContentView.swift */; };
-		1D244AF029ADF37E00250968 /* AudioLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD829ADF37E00250968 /* AudioLevel.swift */; };
-		1D244AF129ADF37E00250968 /* MixTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD929ADF37E00250968 /* MixTrack.swift */; };
-		1D244AF229ADF37E00250968 /* AddFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ADA29ADF37E00250968 /* AddFile.swift */; };
-		1D244AF329ADF37E00250968 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ADB29ADF37E00250968 /* Slider.swift */; };
+		1D244AED29ADF37E00250968 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD429ADF37E00250968 /* View+Extension.swift */; };
+		1D244AEE29ADF37E00250968 /* MixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD529ADF37E00250968 /* MixView.swift */; };
+		1D244AF029ADF37E00250968 /* AudioLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD829ADF37E00250968 /* AudioLevelView.swift */; };
+		1D244AF129ADF37E00250968 /* MixTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AD929ADF37E00250968 /* MixTrackView.swift */; };
+		1D244AF229ADF37E00250968 /* AddFileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ADA29ADF37E00250968 /* AddFileButton.swift */; };
+		1D244AF329ADF37E00250968 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244ADB29ADF37E00250968 /* VolumeSlider.swift */; };
 		1D244AF929ADF42800250968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D244AF829ADF42800250968 /* Assets.xcassets */; };
 		1D244AFB29ADF43200250968 /* mixrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D244AFA29ADF43200250968 /* mixrApp.swift */; };
+		1D3D31A22A5185C800FEB7AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3D31A12A5185C800FEB7AD /* Realm */; };
+		1D3D31A42A5185C800FEB7AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3D31A32A5185C800FEB7AD /* RealmSwift */; };
+		1D3D31A62A5187A400FEB7AD /* FileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D31A52A5187A400FEB7AD /* FileManagerView.swift */; };
+		1D9116CB2A54751E00BE1221 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9116CA2A54751E00BE1221 /* AudioPlayer.swift */; };
+		1D9116CE2A54752D00BE1221 /* SyncTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9116CD2A54752D00BE1221 /* SyncTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D22274129ADF5E0008EF5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D22274129ADF5E0008EF5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D244AAD29ADF36500250968 /* mixr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D244AB729ADF36600250968 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1D244AC129ADF37E00250968 /* UtilitiesBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesBar.swift; sourceTree = "<group>"; };
+		1D244AC129ADF37E00250968 /* UtilitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesView.swift; sourceTree = "<group>"; };
 		1D244AC229ADF37E00250968 /* UtilitiesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesMenu.swift; sourceTree = "<group>"; };
-		1D244AC429ADF37E00250968 /* DeleteTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTrack.swift; sourceTree = "<group>"; };
-		1D244AC529ADF37E00250968 /* PlayTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTime.swift; sourceTree = "<group>"; };
-		1D244AC629ADF37E00250968 /* StopHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopHandler.swift; sourceTree = "<group>"; };
-		1D244AC729ADF37E00250968 /* PlayHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayHandler.swift; sourceTree = "<group>"; };
-		1D244AC829ADF37E00250968 /* MixHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixHandler.swift; sourceTree = "<group>"; };
-		1D244AC929ADF37E00250968 /* AddTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrack.swift; sourceTree = "<group>"; };
+		1D244AC429ADF37E00250968 /* DeleteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		1D244AC529ADF37E00250968 /* PlayDurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayDurationView.swift; sourceTree = "<group>"; };
+		1D244AC629ADF37E00250968 /* PauseStopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseStopButton.swift; sourceTree = "<group>"; };
+		1D244AC729ADF37E00250968 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		1D244AC829ADF37E00250968 /* MixHandlerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixHandlerView.swift; sourceTree = "<group>"; };
+		1D244AC929ADF37E00250968 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		1D244ACB29ADF37E00250968 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		1D244ACC29ADF37E00250968 /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
-		1D244ACD29ADF37E00250968 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		1D244ACE29ADF37E00250968 /* Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
+		1D244ACC29ADF37E00250968 /* MixControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixControl.swift; sourceTree = "<group>"; };
+		1D244ACE29ADF37E00250968 /* FetchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchTimer.swift; sourceTree = "<group>"; };
 		1D244ACF29ADF37E00250968 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		1D244AD229ADF37E00250968 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
-		1D244AD429ADF37E00250968 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		1D244AD529ADF37E00250968 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1D244AD829ADF37E00250968 /* AudioLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioLevel.swift; sourceTree = "<group>"; };
-		1D244AD929ADF37E00250968 /* MixTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixTrack.swift; sourceTree = "<group>"; };
-		1D244ADA29ADF37E00250968 /* AddFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFile.swift; sourceTree = "<group>"; };
-		1D244ADB29ADF37E00250968 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		1D244AD429ADF37E00250968 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		1D244AD529ADF37E00250968 /* MixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixView.swift; sourceTree = "<group>"; };
+		1D244AD829ADF37E00250968 /* AudioLevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioLevelView.swift; sourceTree = "<group>"; };
+		1D244AD929ADF37E00250968 /* MixTrackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixTrackView.swift; sourceTree = "<group>"; };
+		1D244ADA29ADF37E00250968 /* AddFileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFileButton.swift; sourceTree = "<group>"; };
+		1D244ADB29ADF37E00250968 /* VolumeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		1D244AF829ADF42800250968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D244AFA29ADF43200250968 /* mixrApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mixrApp.swift; sourceTree = "<group>"; };
+		1D3D31A52A5187A400FEB7AD /* FileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerView.swift; sourceTree = "<group>"; };
+		1D9116CA2A54751E00BE1221 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		1D9116CD2A54752D00BE1221 /* SyncTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3D31A42A5185C800FEB7AD /* RealmSwift in Frameworks */,
+				1D3D31A22A5185C800FEB7AD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,88 +96,177 @@
 		1D244AAF29ADF36500250968 /* mixr */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AF829ADF42800250968 /* Assets.xcassets */,
-				1D244AD529ADF37E00250968 /* ContentView.swift */,
-				1D244ACA29ADF37E00250968 /* Data */,
-				1D244AD329ADF37E00250968 /* Extensions */,
-				1D22274129ADF5E0008EF5AD /* Info.plist */,
-				1D244AC329ADF37E00250968 /* MixHandler */,
-				1D244AFA29ADF43200250968 /* mixrApp.swift */,
-				1D244AD729ADF37E00250968 /* MixTrack */,
-				1D244AB629ADF36600250968 /* Preview Content */,
-				1D244AD129ADF37E00250968 /* Tutorial */,
-				1D244AC029ADF37E00250968 /* UtilitiesBar */,
+				1D244ACA29ADF37E00250968 /* Core */,
+				1D3D31A52A5187A400FEB7AD /* FileManagerView.swift */,
+				1D9116D12A54780800BE1221 /* Resources */,
+				1D9116D22A54784D00BE1221 /* Utilities */,
+				1D9116C52A54727400BE1221 /* Views */,
 			);
 			path = mixr;
 			sourceTree = "<group>";
 		};
-		1D244AB629ADF36600250968 /* Preview Content */ = {
+		1D244AC029ADF37E00250968 /* UtilitiesView */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AB729ADF36600250968 /* Preview Assets.xcassets */,
+				1D9116C62A5472C900BE1221 /* Menu */,
+				1D244AC129ADF37E00250968 /* UtilitiesView.swift */,
 			);
-			path = "Preview Content";
+			path = UtilitiesView;
 			sourceTree = "<group>";
 		};
-		1D244AC029ADF37E00250968 /* UtilitiesBar */ = {
+		1D244AC329ADF37E00250968 /* MixHandlerView */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AC129ADF37E00250968 /* UtilitiesBar.swift */,
-				1D244AC229ADF37E00250968 /* UtilitiesMenu.swift */,
+				1D9116C42A54722900BE1221 /* Views */,
+				1D9116C32A54721D00BE1221 /* Buttons */,
+				1D244AC829ADF37E00250968 /* MixHandlerView.swift */,
 			);
-			path = UtilitiesBar;
+			path = MixHandlerView;
 			sourceTree = "<group>";
 		};
-		1D244AC329ADF37E00250968 /* MixHandler */ = {
+		1D244ACA29ADF37E00250968 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AC929ADF37E00250968 /* AddTrack.swift */,
-				1D244AC429ADF37E00250968 /* DeleteTrack.swift */,
-				1D244AC629ADF37E00250968 /* StopHandler.swift */,
-				1D244AC729ADF37E00250968 /* PlayHandler.swift */,
-				1D244AC529ADF37E00250968 /* PlayTime.swift */,
-				1D244AC829ADF37E00250968 /* MixHandler.swift */,
-			);
-			path = MixHandler;
-			sourceTree = "<group>";
-		};
-		1D244ACA29ADF37E00250968 /* Data */ = {
-			isa = PBXGroup;
-			children = (
+				1D9116C92A5474A500BE1221 /* Struct */,
 				1D244ACB29ADF37E00250968 /* Data.swift */,
-				1D244ACC29ADF37E00250968 /* Mix.swift */,
-				1D244ACD29ADF37E00250968 /* File.swift */,
-				1D244ACE29ADF37E00250968 /* Fetch.swift */,
-				1D244ACF29ADF37E00250968 /* Player.swift */,
 			);
-			path = Data;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		1D244AD129ADF37E00250968 /* Tutorial */ = {
+		1D244AD129ADF37E00250968 /* TutorialView */ = {
 			isa = PBXGroup;
 			children = (
 				1D244AD229ADF37E00250968 /* TutorialView.swift */,
 			);
-			path = Tutorial;
+			path = TutorialView;
 			sourceTree = "<group>";
 		};
 		1D244AD329ADF37E00250968 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AD429ADF37E00250968 /* ViewExtension.swift */,
+				1D244AD429ADF37E00250968 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1D244AD729ADF37E00250968 /* MixTrack */ = {
+		1D244AD729ADF37E00250968 /* MixTrackView */ = {
 			isa = PBXGroup;
 			children = (
-				1D244AD829ADF37E00250968 /* AudioLevel.swift */,
-				1D244AD929ADF37E00250968 /* MixTrack.swift */,
-				1D244ADA29ADF37E00250968 /* AddFile.swift */,
-				1D244ADB29ADF37E00250968 /* Slider.swift */,
+				1D9116D32A54796900BE1221 /* Views */,
+				1D244AD929ADF37E00250968 /* MixTrackView.swift */,
 			);
-			path = MixTrack;
+			path = MixTrackView;
+			sourceTree = "<group>";
+		};
+		1D9116C32A54721D00BE1221 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AC929ADF37E00250968 /* AddButton.swift */,
+				1D244AC429ADF37E00250968 /* DeleteButton.swift */,
+				1D244AC629ADF37E00250968 /* PauseStopButton.swift */,
+				1D244AC729ADF37E00250968 /* PlayButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		1D9116C42A54722900BE1221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AC529ADF37E00250968 /* PlayDurationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D9116C52A54727400BE1221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AD729ADF37E00250968 /* MixTrackView */,
+				1D244AD129ADF37E00250968 /* TutorialView */,
+				1D9116C72A5472D800BE1221 /* MixView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D9116C62A5472C900BE1221 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AC229ADF37E00250968 /* UtilitiesMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		1D9116C72A5472D800BE1221 /* MixView */ = {
+			isa = PBXGroup;
+			children = (
+				1D9116C82A5472E300BE1221 /* Views */,
+				1D244AD529ADF37E00250968 /* MixView.swift */,
+			);
+			path = MixView;
+			sourceTree = "<group>";
+		};
+		1D9116C82A5472E300BE1221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AC029ADF37E00250968 /* UtilitiesView */,
+				1D244AC329ADF37E00250968 /* MixHandlerView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D9116C92A5474A500BE1221 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				1D9116CF2A54758800BE1221 /* Player */,
+				1D244ACE29ADF37E00250968 /* FetchTimer.swift */,
+				1D244ACC29ADF37E00250968 /* MixControl.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		1D9116CF2A54758800BE1221 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1D9116D02A54759400BE1221 /* Models */,
+				1D244ACF29ADF37E00250968 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		1D9116D02A54759400BE1221 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D9116CA2A54751E00BE1221 /* AudioPlayer.swift */,
+				1D9116CD2A54752D00BE1221 /* SyncTime.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D9116D12A54780800BE1221 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D22274129ADF5E0008EF5AD /* Info.plist */,
+				1D244AFA29ADF43200250968 /* mixrApp.swift */,
+				1D244AF829ADF42800250968 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D9116D22A54784D00BE1221 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D244AD329ADF37E00250968 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1D9116D32A54796900BE1221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D244ADB29ADF37E00250968 /* VolumeSlider.swift */,
+				1D244ADA29ADF37E00250968 /* AddFileButton.swift */,
+				1D244AD829ADF37E00250968 /* AudioLevelView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +285,10 @@
 			dependencies = (
 			);
 			name = mixr;
+			packageProductDependencies = (
+				1D3D31A12A5185C800FEB7AD /* Realm */,
+				1D3D31A32A5185C800FEB7AD /* RealmSwift */,
+			);
 			productName = mixr;
 			productReference = 1D244AAD29ADF36500250968 /* mixr.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +317,9 @@
 				Base,
 			);
 			mainGroup = 1D244AA429ADF36500250968;
+			packageReferences = (
+				1D3D31A02A5185C800FEB7AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1D244AAE29ADF36500250968 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +334,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D244AB829ADF36600250968 /* Preview Assets.xcassets in Resources */,
 				1D244AF929ADF42800250968 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,26 +345,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D244AED29ADF37E00250968 /* ViewExtension.swift in Sources */,
-				1D244AF029ADF37E00250968 /* AudioLevel.swift in Sources */,
-				1D244AE329ADF37E00250968 /* PlayHandler.swift in Sources */,
-				1D244AE529ADF37E00250968 /* AddTrack.swift in Sources */,
-				1D244AE029ADF37E00250968 /* DeleteTrack.swift in Sources */,
+				1D244AED29ADF37E00250968 /* View+Extension.swift in Sources */,
+				1D244AF029ADF37E00250968 /* AudioLevelView.swift in Sources */,
+				1D244AE329ADF37E00250968 /* PlayButton.swift in Sources */,
+				1D9116CE2A54752D00BE1221 /* SyncTime.swift in Sources */,
+				1D244AE529ADF37E00250968 /* AddButton.swift in Sources */,
+				1D244AE029ADF37E00250968 /* DeleteButton.swift in Sources */,
 				1D244AE629ADF37E00250968 /* Data.swift in Sources */,
-				1D244AE429ADF37E00250968 /* MixHandler.swift in Sources */,
-				1D244AF329ADF37E00250968 /* Slider.swift in Sources */,
-				1D244AEE29ADF37E00250968 /* ContentView.swift in Sources */,
-				1D244AE729ADF37E00250968 /* Mix.swift in Sources */,
-				1D244AE229ADF37E00250968 /* StopHandler.swift in Sources */,
+				1D244AE429ADF37E00250968 /* MixHandlerView.swift in Sources */,
+				1D244AF329ADF37E00250968 /* VolumeSlider.swift in Sources */,
+				1D244AEE29ADF37E00250968 /* MixView.swift in Sources */,
+				1D244AE729ADF37E00250968 /* MixControl.swift in Sources */,
+				1D244AE229ADF37E00250968 /* PauseStopButton.swift in Sources */,
+				1D3D31A62A5187A400FEB7AD /* FileManagerView.swift in Sources */,
 				1D244AEC29ADF37E00250968 /* TutorialView.swift in Sources */,
-				1D244AF229ADF37E00250968 /* AddFile.swift in Sources */,
-				1D244AE129ADF37E00250968 /* PlayTime.swift in Sources */,
+				1D9116CB2A54751E00BE1221 /* AudioPlayer.swift in Sources */,
+				1D244AF229ADF37E00250968 /* AddFileButton.swift in Sources */,
+				1D244AE129ADF37E00250968 /* PlayDurationView.swift in Sources */,
 				1D244AFB29ADF43200250968 /* mixrApp.swift in Sources */,
-				1D244ADE29ADF37E00250968 /* UtilitiesBar.swift in Sources */,
-				1D244AE929ADF37E00250968 /* Fetch.swift in Sources */,
-				1D244AE829ADF37E00250968 /* File.swift in Sources */,
+				1D244ADE29ADF37E00250968 /* UtilitiesView.swift in Sources */,
+				1D244AE929ADF37E00250968 /* FetchTimer.swift in Sources */,
 				1D244AEA29ADF37E00250968 /* Player.swift in Sources */,
-				1D244AF129ADF37E00250968 /* MixTrack.swift in Sources */,
+				1D244AF129ADF37E00250968 /* MixTrackView.swift in Sources */,
 				1D244ADF29ADF37E00250968 /* UtilitiesMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +502,7 @@
 				INFOPLIST_FILE = mixr/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = mixr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -434,6 +538,7 @@
 				INFOPLIST_FILE = mixr/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = mixr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -477,6 +582,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D3D31A02A5185C800FEB7AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D3D31A12A5185C800FEB7AD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3D31A02A5185C800FEB7AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1D3D31A32A5185C800FEB7AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3D31A02A5185C800FEB7AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D244AA529ADF36500250968 /* Project object */;
 }

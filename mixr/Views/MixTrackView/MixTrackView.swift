@@ -16,16 +16,16 @@ struct MixTrack: View {
 
     var body: some View {
         VStack(alignment: .center, spacing: 25) {
-            AddDocument(id: data.id, fileURL: data.url)
+            AddFileButton(id: data.id, fileURL: data.url)
             VStack(spacing: 15) {
                 Text(gainText(data.gain))
                     .padding(10)
                     .frame(maxWidth: .infinity)
                     .background(Color.gray)
                 HStack(spacing: 10) {
-                    AudioLevel(amplitude: mix.getAmplitude(id: data.id))
+                    AudioLevelView(amplitude: mix.getAmplitude(id: data.id))
                         .frame(width: 15)
-                    VSlider(gain: $data.gain) {
+                    VolumeSlider(gain: $data.gain) {
                         gain in
                         mix.setVolume(gain: gain, id: data.id)
                     }

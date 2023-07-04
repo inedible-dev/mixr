@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFAudio
 
-struct AddDocument: View {
+struct AddFileButton: View {
     @EnvironmentObject var mix: MixData
     
     var id: String

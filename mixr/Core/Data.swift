@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 import AVFAudio
 
-
 class MixData: ObservableObject {
     @AppStorage("storedMixData") var storage = ""
     @AppStorage("isTutorialToggled") var tutorial = true

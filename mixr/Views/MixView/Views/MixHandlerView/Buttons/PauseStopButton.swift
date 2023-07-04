@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFAudio
 
-struct PauseButton: View {
+struct PauseStopButton: View {
     @EnvironmentObject var mix: MixData
     
     var body: some View {

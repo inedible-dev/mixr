@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DeleteTrack: View {
+struct DeleteButton: View {
     @EnvironmentObject var mix: MixData
     @Environment(\.horizontalSizeClass) private var sizeClass
     

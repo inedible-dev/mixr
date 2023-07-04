@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFAudio
 
-struct VSlider: View {
+struct VolumeSlider: View {
     @Binding var gain: Float
     var changeVolume: (_ gain: Float) -> Void
     

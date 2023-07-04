@@ -1,25 +1,25 @@
 import SwiftUI
 import AVFAudio
 
-struct MixHandler: View {
+struct MixHandlerView: View {
     @EnvironmentObject var mix: MixData
     
     var body: some View {
         HStack {
             HStack(spacing: 25) {
-                AddTrack()
+                AddButton()
                 if(mix.selectedTrack != nil && mix.data.count > 1) {
-                    DeleteTrack()
+                    DeleteButton()
                 }
                 Spacer()
             }.inExpandingRectangle()
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
-            PlayTime()
+            PlayDurationView()
             Spacer()
             HStack(spacing: 36) {
                 Spacer()
-                PauseButton()
+                PauseStopButton()
                 PlayButton()
             }.inExpandingRectangle()
                 .fixedSize(horizontal: false, vertical: true)

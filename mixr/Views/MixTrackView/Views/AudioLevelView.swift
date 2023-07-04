@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AudioLevel: View {
+struct AudioLevelView: View {
     var amplitude: Float
     
     var body: some View {
